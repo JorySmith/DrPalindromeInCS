@@ -37,10 +37,11 @@ namespace DrPalindromeInCS.Controllers
             return View(model);
         }
 
+        // Create HttpPost for Reverse() to get user's string input and apply C# logic to it
         [HttpPost]
         // Ensure proper form is submitted/posted
         [ValidateAntiForgeryToken]
-        // Create in IAR for Reverse Post and supply the Palindrome palindrome parameter
+        // Create an IAR for Reverse Post and supply the Palindrome palindrome parameter
         public IActionResult Reverse(Palindrome palindrome)
         {
             string inputWord = palindrome.InputWord;
